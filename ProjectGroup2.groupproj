@@ -1,0 +1,39 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{28192B18-E393-47B9-8E2B-EE105C06154E}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="tela1.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="C:\Users\3os Anos\Desktop\roda ai lek\tela1.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="tela1">
+        <MSBuild Projects="C:\Users\3os Anos\Desktop\roda ai lek\tela1.dproj"/>
+    </Target>
+    <Target Name="tela1:Clean">
+        <MSBuild Projects="C:\Users\3os Anos\Desktop\roda ai lek\tela1.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="tela1:Make">
+        <MSBuild Projects="C:\Users\3os Anos\Desktop\roda ai lek\tela1.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="tela1;tela1"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="tela1:Clean;tela1:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="tela1:Make;tela1:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
